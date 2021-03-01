@@ -13,9 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.schauderhaft.beyond;
+package de.schauderhaft.beyond.cashing;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.annotation.Id;
 
-public interface MinionRepository extends CrudRepository<Minion, Long> {
+class Color {
+
+	@Id
+	Long id;
+
+	String name;
+
+	Color(String name) {
+		this.name = name;
+	}
 }

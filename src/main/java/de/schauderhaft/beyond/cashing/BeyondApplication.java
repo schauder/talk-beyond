@@ -1,4 +1,4 @@
-package de.schauderhaft.beyond;
+package de.schauderhaft.beyond.cashing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

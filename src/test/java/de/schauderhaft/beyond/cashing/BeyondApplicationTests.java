@@ -1,4 +1,4 @@
-package de.schauderhaft.beyond;
+package de.schauderhaft.beyond.cashing;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,10 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static java.util.Arrays.*;
 import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
