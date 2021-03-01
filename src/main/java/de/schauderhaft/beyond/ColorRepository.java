@@ -15,7 +15,13 @@
  */
 package de.schauderhaft.beyond;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Optional;
+
 public interface ColorRepository extends CrudRepository<Color, Long> {
+	@Override
+	@Cacheable("colors")
+	Optional<Color> findById(Long aLong);
 }
