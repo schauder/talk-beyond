@@ -10,7 +10,7 @@ import org.springframework.util.MultiValueMap;
 import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
-class BeyondApplicationTests {
+class CashingApplicationTests {
 
 	@Autowired
 	MinionRepository minions;

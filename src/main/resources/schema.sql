@@ -12,3 +12,9 @@ create table minion (
     color bigint,
     constraint FK_minion_color foreign key (color) references color
 );
+
+create table minion_auto_id (
+    id bigint auto_increment primary key,
+    version int,
+    name varchar(255)
+);
