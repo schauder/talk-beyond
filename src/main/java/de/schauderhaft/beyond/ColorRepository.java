@@ -15,16 +15,7 @@
  */
 package de.schauderhaft.beyond;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.repository.CrudRepository;
 
-class Color {
-
-	@Id
-	Long id;
-
-	String name;
-
-	Color(String name) {
-		this.name = name;
-	}
+public interface ColorRepository extends CrudRepository<Color, Long> {
 }

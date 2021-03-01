@@ -16,9 +16,12 @@
 package de.schauderhaft.beyond;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.annotation.Version;
+import org.springframework.data.jdbc.core.mapping.AggregateReference;
+import org.springframework.util.Assert;
 
-public class Minion {
+class Minion {
 
 	@Id
 	Long id;
@@ -27,12 +30,21 @@ public class Minion {
 
 	String name;
 	int numberOfEyes;
-	Color color;
+	AggregateReference<Color, Long> color;
 
-	public Minion(String name, int numberOfEyes, Color color) {
+	@PersistenceConstructor
+	private Minion(String name, int numberOfEyes, AggregateReference<Color, Long> color) {
+
+		Assert.notNull(name, "Name must not be NULL.");
+		Assert.notNull(color, "Color id must not be NULL.");
 
 		this.name = name;
 		this.numberOfEyes = numberOfEyes;
 		this.color = color;
+	}
+
+	Minion(String name, int numberOfEyes, Color color) {
+
+		this(name, numberOfEyes, AggregateReference.to(color.id));
 	}
 }
