@@ -15,14 +15,8 @@
  */
 package de.schauderhaft.beyond.idgeneration;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.repository.CrudRepository;
 
-public class MinionAutoId {
-	@Id
-	Long id;
-	String name;
+public interface StringIdMinionRepository extends CrudRepository<StringIdMinion, String> {
 
-	MinionAutoId(String name) {
-		this.name = name;
-	}
 }

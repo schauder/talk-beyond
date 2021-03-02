@@ -17,6 +17,6 @@ package de.schauderhaft.beyond.idgeneration;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface MinionAutoIdRepository extends CrudRepository<MinionAutoId, Long> {
+public interface MinionRepository extends CrudRepository<Minion, Long> {
 
 }
