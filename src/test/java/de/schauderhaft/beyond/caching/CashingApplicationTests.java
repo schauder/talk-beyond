@@ -1,4 +1,4 @@
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.caching;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

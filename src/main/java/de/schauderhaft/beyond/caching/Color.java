@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.caching;
 
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.annotation.Id;
 
-import java.util.Optional;
+class Color {
 
-interface ColorRepository extends CrudRepository<Color, Long> {
-	@Override
-	@Cacheable("colors")
-	Optional<Color> findById(Long aLong);
+	@Id
+	Long id;
+
+	String name;
+
+	Color(String name) {
+		this.name = name;
+	}
 }

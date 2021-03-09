@@ -13,38 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.bidirectional;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.PersistenceConstructor;
-import org.springframework.data.annotation.Version;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
-import org.springframework.util.Assert;
 
 class Minion {
-
 	@Id
 	Long id;
-	@Version
-	long version;
-
 	String name;
-	int numberOfEyes;
-	AggregateReference<Color, Long> color;
+	AggregateReference<Person, Long> evilMaster;
 
-	@PersistenceConstructor
-	private Minion(String name, int numberOfEyes, AggregateReference<Color, Long> color) {
-
-		Assert.notNull(name, "Name must not be NULL.");
-		Assert.notNull(color, "Color id must not be NULL.");
-
+	Minion(String name, AggregateReference<Person, Long> evilMaster) {
 		this.name = name;
-		this.numberOfEyes = numberOfEyes;
-		this.color = color;
-	}
-
-	Minion(String name, int numberOfEyes, Color color) {
-
-		this(name, numberOfEyes, AggregateReference.to(color.id));
+		this.evilMaster = evilMaster;
 	}
 }

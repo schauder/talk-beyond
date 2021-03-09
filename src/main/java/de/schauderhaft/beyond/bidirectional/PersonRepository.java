@@ -13,18 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.bidirectional;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.repository.CrudRepository;
 
-class Color {
+interface PersonRepository extends CrudRepository<Person, Long> {
 
-	@Id
-	Long id;
-
-	String name;
-
-	Color(String name) {
-		this.name = name;
-	}
 }

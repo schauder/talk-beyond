@@ -1,4 +1,4 @@
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.bidirectional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @EnableCaching
 @SpringBootApplication
-class CashingApplication {
+class BidirectionalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CashingApplication.class, args);
+		SpringApplication.run(BidirectionalApplication.class, args);
 	}
 
 }
