@@ -18,7 +18,7 @@ package de.schauderhaft.beyond.join;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
 
-public class Minion {
+class Minion {
 	@Id
 	Long id;
 	String name;

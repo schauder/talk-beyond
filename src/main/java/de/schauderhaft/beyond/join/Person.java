@@ -17,7 +17,7 @@ package de.schauderhaft.beyond.join;
 
 import org.springframework.data.annotation.Id;
 
-public class Person {
+class Person {
 	@Id
 	Long id;
 	String name;

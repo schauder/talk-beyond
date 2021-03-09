@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @EnableCaching
 @SpringBootApplication
-public class IdGenerationApplication {
+class IdGenerationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IdGenerationApplication.class, args);

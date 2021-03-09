@@ -13,9 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.schauderhaft.beyond.cashing;
+package de.schauderhaft.beyond.conversion;
 
-import org.springframework.data.repository.CrudRepository;
+import java.util.HashMap;
+import java.util.Map;
 
-interface MinionRepository extends CrudRepository<Minion, Long> {
+public class Description {
+	Map<String, String> appearance = new HashMap<>();
+	Map<String, String> personality = new HashMap<>();
 }

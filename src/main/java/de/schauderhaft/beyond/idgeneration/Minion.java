@@ -17,7 +17,7 @@ package de.schauderhaft.beyond.idgeneration;
 
 import org.springframework.data.annotation.Id;
 
-public class Minion {
+class Minion {
 	@Id
 	Long id;
 	String name;

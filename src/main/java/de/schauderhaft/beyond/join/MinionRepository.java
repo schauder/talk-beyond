@@ -20,7 +20,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface MinionRepository extends CrudRepository<Minion, Long> {
+interface MinionRepository extends CrudRepository<Minion, Long> {
 
 	@Query("select m.id as id, m.name name, m.number_of_eyes as number_of_eyes, " +
 			"p.name as master_name, p.id as master_evil_master " +

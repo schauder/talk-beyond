@@ -18,7 +18,7 @@ package de.schauderhaft.beyond.join;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
 import org.springframework.data.relational.core.mapping.Embedded;
 
-public class MinionView extends Minion {
+class MinionView extends Minion {
 	MinionView(String name, AggregateReference<Person, Long> evilMaster) {
 		super(name, evilMaster);
 	}

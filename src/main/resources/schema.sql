@@ -1,3 +1,6 @@
+-- The tables created here are reused for multiple examples.
+-- Therefore they contain columns that are not used for other examples.
+
 create table person
 (
     id   bigint auto_increment primary key,
@@ -19,6 +22,7 @@ create table minion
     number_of_eyes varchar(255),
     color          bigint,
     evil_master    bigint,
+    description    varchar(4000),
     constraint FK_minion_color foreign key (color) references color,
     constraint FK_minion_person foreign key (evil_master) references person
 );

@@ -17,6 +17,6 @@ package de.schauderhaft.beyond.join;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface PersonRepository extends CrudRepository<Person, Long> {
+interface PersonRepository extends CrudRepository<Person, Long> {
 
 }

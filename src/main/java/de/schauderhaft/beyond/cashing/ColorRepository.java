@@ -20,7 +20,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface ColorRepository extends CrudRepository<Color, Long> {
+interface ColorRepository extends CrudRepository<Color, Long> {
 	@Override
 	@Cacheable("colors")
 	Optional<Color> findById(Long aLong);

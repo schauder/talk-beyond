@@ -17,6 +17,6 @@ package de.schauderhaft.beyond.idgeneration;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface StringIdMinionRepository extends CrudRepository<StringIdMinion, String> {
+interface StringIdMinionRepository extends CrudRepository<StringIdMinion, String> {
 
 }
