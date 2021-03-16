@@ -17,7 +17,6 @@ import java.sql.JDBCType;
 
 import static java.util.Arrays.*;
 
-@EnableCaching
 @SpringBootApplication
 class ConversionApplication {
 
@@ -49,7 +48,6 @@ class ConversionApplication {
 			json.put(JSON_APPEARANCE, new JSONObject(source.appearance));
 			json.put("personality", new JSONObject(source.personality));
 
-			System.out.println("Json to be written to database: "  + json.toString());
 
 			return JdbcValue.of(json.toString(), JDBCType.VARCHAR);
 		}
@@ -63,7 +61,6 @@ class ConversionApplication {
 		@Override
 		public Description convert(String jsonString) {
 
-			System.out.println(jsonString);
 			JSONObject json = new JSONObject(jsonString);
 			Description description = new Description();
 			json.getJSONObject(JSON_APPEARANCE).toMap().forEach((k,v) -> description.appearance.put(k, v.toString()));

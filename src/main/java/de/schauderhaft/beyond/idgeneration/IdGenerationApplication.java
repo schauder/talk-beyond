@@ -9,7 +9,6 @@ import org.springframework.data.relational.core.mapping.event.BeforeSaveCallback
 
 import java.util.UUID;
 
-@EnableCaching
 @SpringBootApplication
 class IdGenerationApplication {
 
@@ -21,7 +20,9 @@ class IdGenerationApplication {
 	BeforeSaveCallback<StringIdMinion> beforeSaveCallback() {
 
 		return (minion, mutableAggregateChange) -> {
-			minion.id = UUID.randomUUID().toString();
+			if (minion.id == null) {
+				minion.id = UUID.randomUUID().toString();
+			}
 			return minion;
 		};
 	}
