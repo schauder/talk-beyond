@@ -6,8 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.jdbc.core.JdbcAggregateTemplate;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
 
-import static org.assertj.core.api.Assertions.*;
-
 @SpringBootTest
 class JoinApplicationTests {
 

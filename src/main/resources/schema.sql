@@ -32,3 +32,10 @@ create table string_id_minion
     id   varchar(255) primary key,
     name varchar(255)
 );
+
+
+create table toy
+(
+    minion  bigint not null,
+    name    varchar(255)
+)
