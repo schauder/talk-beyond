@@ -31,7 +31,7 @@ class ConversionApplicationTests {
 
 		Minion bobReloaded = minions.findById(bob.id).get();
 
-		System.out.println(bobReloaded);
+		bobReloaded.description.personality.forEach((k, v) -> System.out.println(k  + " " + v));
 	}
 
 
