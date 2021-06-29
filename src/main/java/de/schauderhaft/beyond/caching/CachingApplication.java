@@ -6,10 +6,10 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @EnableCaching
 @SpringBootApplication
-class CashingApplication {
+class CachingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CashingApplication.class, args);
+		SpringApplication.run(CachingApplication.class, args);
 	}
 
 }

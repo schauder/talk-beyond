@@ -15,6 +15,7 @@
 	<description>Spring Data JDBC beyond the obvious - Demo Project</description>
 	<properties>
 		<java.version>11</java.version>
+		<start-class>de.schauderhaft.beyond.idgeneration.IdGenerationApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
